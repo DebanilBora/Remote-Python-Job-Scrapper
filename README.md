@@ -1,24 +1,73 @@
-Remote Python Job Scraper and Data Logger 🐍
-This project is an automated Python script designed to help with the job search. It scrapes the latest remote Python job listings from the Remote OK website, saves the structured data to a CSV file for long-term tracking, and sends a summary of the listings directly to your email inbox.
+💼 Remote Python Jobs Scraper
 
-Features
-Web Scraping: Uses the requests library to fetch the HTML content of the Remote OK website and BeautifulSoup to intelligently parse and extract key job information.
+A Python script that scrapes the latest remote Python job listings from RemoteOK
+, saves them to a CSV file, and emails the results.
 
-Data Persistence: Demonstrates data handling skills by saving the scraped job title, company, and link to a remote_python_jobs.csv file, allowing for historical analysis and tracking.
+🚀 Features
 
-Automated Email Alerts: Sends a neatly formatted email with a summary of the latest job listings, keeping you informed without manual effort.
+🌍 Web Scraping: Extracts job title, company, and link from RemoteOK.
 
-Secure Credentials: Utilizes a .env file to securely store and access sensitive information like email addresses and passwords, ensuring your credentials are never exposed in the code or on a public repository.
+📂 CSV Export: Saves scraped job listings to remote_python_jobs.csv.
 
-Technologies Used
-Python: The core programming language.
+📧 Email Notifications: Automatically emails the job list to your inbox.
 
-requests: For making HTTP requests to the website.
+🔐 Secure Credentials: Uses environment variables via .env file.
 
-BeautifulSoup: For parsing HTML content.
+🛠 Tech Stack
 
-dotenv: For managing environment variables.
+Python 3
 
-smtplib & email: For sending emails.
+Libraries:
 
-csv: Python's built-in module for reading and writing CSV files.
+requests – fetch HTML content
+
+beautifulsoup4 – parse job listings
+
+csv – save data to CSV
+
+smtplib, email.mime – send job listings via email
+
+python-dotenv – manage environment variables
+
+⚙️ Setup & Installation
+1️⃣ Clone the repository
+git clone https://github.com/DebanilBora/remote-python-jobs.git
+cd remote-python-jobs
+
+2️⃣ Create & activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate   # Linux/Mac
+.venv\Scripts\activate      # Windows
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Create a .env file
+EMAIL_ADDRESS=your_email@gmail.com
+EMAIL_PASSWORD=your_app_password
+EMAIL_RECEIVER=receiver_email@gmail.com
+
+
+⚠️ Use an App Password if using Gmail.
+
+▶️ Usage
+
+Run the script:
+
+python main.py
+
+
+✅ Scrapes job data from RemoteOK
+
+✅ Saves jobs to remote_python_jobs.csv
+
+✅ Sends an email with the latest job listings
+
+📂 Example CSV Output
+Title	Company	Link
+Python Developer	Acme Inc.	https://remoteok.com/12345
+
+Backend Engineer	DevWorks	https://remoteok.com/67890
+🏷 Tags
+
+#Python #WebScraping #Automation #EmailBot #RemoteJobs #PortfolioProject
